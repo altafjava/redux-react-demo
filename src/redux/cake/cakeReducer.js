@@ -9,11 +9,11 @@ const cakeReducer = (state = initialState, action) => {
     case BUY_CAKE:
       return {
         ...state,
-        noOfCakes: state.noOfCakes - 1,
+        noOfCakes: state.noOfCakes - action.payload,
       };
 
     default:
       return state;
   }
 };
-export default cakeReducer
+export default cakeReducer;
